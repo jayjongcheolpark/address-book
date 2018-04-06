@@ -1,0 +1,8 @@
+.l_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.l_header {}
+
+.l_main {}
