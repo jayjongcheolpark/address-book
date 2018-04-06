@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import client from './apollo';
 import store from './redux';
+import './index.css';
 
 ReactDOM.render(
   <ApolloProvider client={client}>

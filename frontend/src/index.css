@@ -1,0 +1,9 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  color: white;
+  text-decoration: none;
+}
