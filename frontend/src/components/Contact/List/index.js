@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+
+import { CONTACTS } from '../../../apollo/query';
 
 const Ul = styled.ul`
   padding: 0;
@@ -64,16 +65,6 @@ ContactList.propTypes = {
   }),
   keyword: PropTypes.string.isRequired,
 };
-
-const CONTACTS = gql`
-  {
-    contacts {
-      contactId
-      lastname
-      firstname
-    }
-  }
-`;
 
 export default connect(({ keyword }) => ({
   keyword,

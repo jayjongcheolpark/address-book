@@ -12,3 +12,13 @@ export const CONTACT = gql`
     }
   }
 `;
+
+export const CONTACTS = gql`
+  {
+    contacts {
+      contactId
+      lastname
+      firstname
+    }
+  }
+`;
