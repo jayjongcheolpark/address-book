@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
 const InputText = ({ evtKey, label, value, changeHandler }) => (
   <StyledDiv>
     <StyledLabel>{label}</StyledLabel>
-    <StyledInput type="text" value={value} onChange={e => changeHandler(e, evtKey)} />
+    <StyledInput type="text" value={value} onChange={e => changeHandler(e, evtKey)} autoComplete={evtKey} />
   </StyledDiv>
 );
 

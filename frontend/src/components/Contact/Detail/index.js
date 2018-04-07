@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
 import styled from 'styled-components';
 import { Redirect, Link } from 'react-router-dom';
 
 import ContactDetailInfo from './Info';
-import { CONTACT } from '../../../apollo/query';
+import QueryContact from '../../QueryContact';
 
 const StyledLink = styled(Link)`
   background-color: #71b200;
@@ -37,29 +36,12 @@ const ContactDetail = props => {
   }
 
   return (
-    <Query query={CONTACT} variables={{ contactId: num }}>
-      {({ loading, error, data }) => {
-        if (error) {
-          return <Redirect to="/Error/Network-Error" />;
-        }
-
-        if (loading) {
-          return <div />;
-        }
-
-        if (data.contact === null) {
-          return <Redirect to="/Error/There-Is-No-Matched-Contact" />;
-        }
-        return (
-          <Div>
-            <RightDiv>
-              <StyledLink to={`/edit/${num}`}>edit</StyledLink>
-            </RightDiv>
-            <ContactDetailInfo contact={data.contact} />
-          </Div>
-        );
-      }}
-    </Query>
+    <Div>
+      <RightDiv>
+        <StyledLink to={`/edit/${num}`}>edit</StyledLink>
+      </RightDiv>
+      <QueryContact contactId={num} component={ContactDetailInfo} />
+    </Div>
   );
 };
 
