@@ -98,7 +98,7 @@ class ContactDetailEditForm extends React.Component {
     if (this.state.redirect) {
       return <Redirect to={`/${this.props.contact.contactId}`} />;
     }
-    console.log(this.props);
+
     return (
       <BlueForm onSubmit={this.submitHandler}>
         <InputGroup contact={this.state.contact} changeHandler={this.changeHandler} />
