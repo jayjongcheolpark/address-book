@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
 import styled from 'styled-components';
 import { Redirect, Link } from 'react-router-dom';
 
 import ContactDetailInfo from './Info';
+import { CONTACT } from '../../../apollo/query';
 
 const StyledLink = styled(Link)`
   background-color: #71b200;
@@ -28,19 +28,6 @@ const Div = styled.div`
 
 const RightDiv = styled.div`
   float: right;
-`;
-
-const CONTACT = gql`
-  query contact($contactId: Int!) {
-    contact(contactId: $contactId) {
-      contactId
-      firstname
-      lastname
-      phone
-      email
-      address
-    }
-  }
 `;
 
 const ContactDetail = props => {
