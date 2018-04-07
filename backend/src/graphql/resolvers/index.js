@@ -8,8 +8,6 @@ const resolvers = {
   Mutation: {
     updateContact: (root, { input }) => {
       const { contactId } = input;
-      console.log(contactId);
-      console.log(input);
       return ContactModel.findOneAndUpdate({ contactId }, input);
     },
   },
