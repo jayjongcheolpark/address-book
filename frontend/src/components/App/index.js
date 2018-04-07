@@ -1,28 +1,31 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
-import SideBar from '../SideBar';
 import Main from '../Main';
 import ContactDetail from '../Contact/Detail';
+import ContactDetailEdit from '../Contact/Detail/Edit';
 import NotFound from '../NotFound';
+import DefaultLayout from '../Layout/Default';
+import NoSideBarLayout from '../Layout/NoSideBar';
 
 const GridDiv = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
   height: 100vh;
+  grid-template-columns: 250px 1fr;
 `;
 
 const App = () => (
   <BrowserRouter>
     <GridDiv>
-      <SideBar />
       <Switch>
-        <Route exact path="/" component={Main} />
-        <Route exact path="/:id" component={ContactDetail} />
-        <Route component={NotFound} />
+        <DefaultLayout exact path="/" component={Main} />
+        <DefaultLayout exact path="/:id" component={ContactDetail} />
+        <NoSideBarLayout exact path="/edit/:id" component={ContactDetailEdit} />
+        <DefaultLayout component={NotFound} />
       </Switch>
     </GridDiv>
   </BrowserRouter>
 );
+
 export default App;

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
-const test = (state = {}, action) => state;
+import searchReducer from './search';
+
 export default combineReducers({
-  test,
+  keyword: searchReducer,
 });
