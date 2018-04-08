@@ -3,8 +3,7 @@ import { SEARCH } from '../constants/actionTypes';
 const searchReducer = (state = '', action) => {
   switch (action.type) {
     case SEARCH: {
-      const newState = action.keyword;
-      return newState;
+      return action.keyword;
     }
     default:
       return state;

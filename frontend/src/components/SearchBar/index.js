@@ -28,7 +28,7 @@ const InputDiv = styled.div`
   padding: 0;
 `;
 
-class SearchBar extends React.Component {
+export class SearchBar extends React.Component {
   searchKeyword = e => {
     this.props.searchAction(e.target.value);
   };
