@@ -25,5 +25,5 @@ npm start
 ### Screenshot
 
 ![Main](https://user-images.githubusercontent.com/13275149/38463145-f38dcece-3ac1-11e8-980c-9f2285209dab.png)
-![Edit](https://user-images.githubusercontent.com/13275149/38463144-f37c02f2-3ac1-11e8-9ed0-d3d40e56965d.png)
+![Edit](https://user-images.githubusercontent.com/13275149/38472383-29b7a598-3b4d-11e8-9369-0a012dd237fd.png)
 
