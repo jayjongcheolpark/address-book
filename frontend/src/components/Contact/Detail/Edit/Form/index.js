@@ -38,11 +38,13 @@ const StyledDiv = styled.div`
 `;
 
 const BlueForm = styled.form`
+  display: inline-block;
   margin: 2em;
-  width: 600px;
-  height: 700px;
+  width: 390px;
+  height: 500px;
   border-radius: 20px;
   padding: 2em;
+  box-shadow: 0px 20px 150px #809baf;
 `;
 
 class ContactDetailEditForm extends React.Component {
