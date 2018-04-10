@@ -1,6 +1,6 @@
 # Address book
 
-Address book using React, Redux, Node, MongoDB, and GraphQL
+Address book using React, Redux, Node, MongoDB, Apollo Client / Server and GraphQL
 
 ## Getting Started
 
